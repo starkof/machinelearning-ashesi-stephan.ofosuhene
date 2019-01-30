@@ -8,6 +8,7 @@ from q4_predict import q4_predict
 from q4_cross_validation_error import q4_cross_validation_error
 
 
+
 def checking4b():
     check_data = spio.loadmat('q4b_checker.mat',squeeze_me=False)
 
@@ -77,6 +78,7 @@ def checking4b():
     if c != 0:
         print("Exiting q4b due to error\n")        
         sys.exit()
+
 
    
 def main():
