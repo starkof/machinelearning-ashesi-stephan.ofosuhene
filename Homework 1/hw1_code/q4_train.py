@@ -20,15 +20,15 @@ def q4_train(X, Y, lambdaval, mode):
     #         containing the learned model parameters.
     #
 
-    # print('X =', X)
-    # print('B =', q4_features(X, mode))
-    # print('Y =', Y)
-    # print('lambda =', lambdaval)
-    # print('mode =', mode)
-
     B = np.matrix(q4_features(X, mode))
 
-    left = B.transpose() * B + (lambdaval[0][0] * np.matrix(np.identity(B.shape[1])))
+    U = np.matrix(np.identity(B.shape[1]))
+    U[0, 0] = 0
+
+    if len(Y.shape) < 2:
+        Y = Y.reshape((90, 1))
+
+    left = B.transpose() * B + (lambdaval[0][0] * U)
     right = B.transpose() * Y
 
     theta = np.linalg.solve(left, right)

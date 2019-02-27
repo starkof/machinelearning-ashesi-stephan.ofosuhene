@@ -13,4 +13,10 @@ def q3_prior(mu, a, Z):
 
     # insert your code here
 
+    print(Z)
+
+    if Z != 0:
+        prob = (1/Z)*mu**(a-1)*(1-mu)**(a-1)
+    else:
+        prob = mu
     return prob

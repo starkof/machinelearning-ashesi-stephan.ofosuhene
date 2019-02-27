@@ -13,5 +13,7 @@ def q3_posterior(mu, m, H, a, Z):
     #  prob: N-dimensional numpy.ndarray vector of type 'float' containing he posterior values associated with the entries of mu
 
     # insert your code here
+
+    prob = (mu**H*((1-mu)**(m-H))) + ((1/Z)*mu**(a-1)*(1-mu)**(a-1))
  
     return prob

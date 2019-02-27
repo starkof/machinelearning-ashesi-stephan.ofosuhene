@@ -14,4 +14,6 @@ def q3_likelihood(mu, m, H):
     
     # insert your code here
 
+    likelihoods = (mu**H)*((1-mu)**(m-H))
+
     return likelihoods
