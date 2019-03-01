@@ -90,7 +90,7 @@ def checking4f():
             c+=1
         else:
             print("q4_test_error successfully passed test!\n")                    
-    
+
     except:
         c+=1
         print("cannot execute one of the functions required for q4f\n")

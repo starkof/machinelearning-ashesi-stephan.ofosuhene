@@ -74,4 +74,7 @@ def q4_cross_validation_error(X, Y, lambdavec, mode, N):
 
         avg_errors[i] = np.mean(nfold_errors)
 
+        # reshape the output to conform with specifications
+        avg_errors.reshape((avg_errors.shape[0], 1))
+
     return avg_errors

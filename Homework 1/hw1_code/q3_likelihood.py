@@ -11,7 +11,7 @@ def q3_likelihood(mu, m, H):
     #
     # OUTPUT
     #  lik: N-dimensional numpy.ndarray vector  of type 'float' containing the likelihood values associated with the entries of mu
-    
-    # insert your code here
+
+    likelihoods = (np.power(mu, H))*np.power((1-mu), (m-H))
 
     return likelihoods

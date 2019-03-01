@@ -26,7 +26,7 @@ def q4_train(X, Y, lambdaval, mode):
     U[0, 0] = 0
 
     if len(Y.shape) < 2:
-        Y = Y.reshape((90, 1))
+        Y = Y.reshape((Y.shape[0], 1))
 
     left = B.transpose() * B + (lambdaval[0][0] * U)
     right = B.transpose() * Y
