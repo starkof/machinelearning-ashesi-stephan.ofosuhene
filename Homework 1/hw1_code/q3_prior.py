@@ -13,4 +13,6 @@ def q3_prior(mu, a, Z):
 
     # insert your code here
 
+    prob = (1/Z)*(np.power(mu, a-1))*np.power((1-mu), a-1)
+
     return prob
